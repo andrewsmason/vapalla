@@ -9,10 +9,25 @@
 <body>
     <div class="iphone-container">
         <img src="assets/imgs/iphone16.svg" alt="iPhone Mockup" class="iphone-svg">
-        <video class="iphone-video" autoplay loop muted playsinline>
+        <video class="iphone-video" autoplay muted playsinline>
             <source src="assets/video/moneyagent.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
+    <script>
+        const video = document.querySelector('.iphone-video');
+        const container = document.querySelector('.iphone-container');
+
+        video.addEventListener('ended', function() {
+            this.currentTime = this.duration;
+        });
+
+        container.addEventListener('click', function() {
+            if (video.ended || video.paused) {
+                video.currentTime = 0;
+                video.play();
+            }
+        });
+    </script>
 </body>
 </html>
