@@ -29,13 +29,13 @@ body, html {
 
 .iphone-video {
     position: absolute;
-    top: 50%;
+    top: 50.7%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 81%; /* Reduced from 87.5% */
-    height: 77%; /* Reduced from 89% */
+    width: 81%;
+    height: 85%; /* Increased from 86% to 89% */
     object-fit: cover;
-    border-radius: 30px; /* Slightly reduced to match the inner screen */
+    border-radius: 40px; /* Increased from 30px to 40px */
     overflow: hidden;
 }
 
